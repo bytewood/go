@@ -7,7 +7,7 @@ type Vertex struct {
 	Y int
 }
 
-func main() {
+func pointers() {
 	s := "hello"
 	p := &s
 	fmt.Println(*p, s)
@@ -15,14 +15,15 @@ func main() {
 	v := Vertex{1, 2}
 	vp := &v
 	vp.X = 3
-	fmt.Println("v :",v)
+	fmt.Println("v :", v)
 	fmt.Println(v.X)
 
 	fmt.Println(Vertex{X: 4})
 	fmt.Println(Vertex{})
 	fmt.Printf("%T\n", vp)
+}
 
-
+func slices() {
 	var a [10]int
 	a[0] = 0
 	a[1] = 1
@@ -51,7 +52,9 @@ func main() {
 	fmt.Println(primes)
 	fmt.Println(slice)
 	fmt.Println(sliceb)
+}
 
+func sliceLiterals() {
 	sliceLiteral := []int{1,2,3,4,5,6,7}
 	fmt.Println("sliceLiteral : ", sliceLiteral)
 
@@ -66,9 +69,15 @@ func main() {
 
 	fmt.Println("SliceStructLiteral : ", sliceStructLiteral)
 	fmt.Println(sliceStructLiteral[0].s)
+}
+
+func lenAndCap() {
+	primes := make([]int, 10)
+
+	var slice = primes[4:7]
+
 	fmt.Println(len(primes))
 	fmt.Println(len(slice))
 	fmt.Println(cap(slice))
-
 
 }

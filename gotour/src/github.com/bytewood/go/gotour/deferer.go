@@ -8,13 +8,13 @@ func main() {
 
 	io = 1
 
-	defer fmt.Println(getio())
+	defer fmt.Println(getIO())
 
 	io = 2
 
 	fmt.Print("i = ")
 }
 
-func getio() int {
-	return io;
+func getIO() int{
+	return io
 }
